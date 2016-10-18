@@ -1,0 +1,13 @@
+SCAN
+    for server in servers
+    do checks for the server type
+    report checks to FORMAT
+
+FORMAT
+    use general template
+    fill out with info from SCAN
+         Basic context highlighting/formatting.
+    (in future) allow for datatypes that generate charts or icons
+
+SEND
+    Send email to recipient
