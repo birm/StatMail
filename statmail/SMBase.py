@@ -5,6 +5,7 @@ I want to define the base class now.
 
 class SMBase(Object):
     """A base class for all statmail objects."""
+
     def __init__(self):
         """Initalize a statmail object."""
         pass

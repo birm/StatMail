@@ -1,7 +1,10 @@
 from .SMBase import SMBase
+
 """ A collection of builtin server types. """
+
 class Types(SMBase):
     """A class for keeping track of all types supported."""
+
     # TODO read from files later for types, but for now...
     supported = ["minimal"]
 
@@ -12,7 +15,7 @@ class Types(SMBase):
 
     @classmethod
     def find_template(self, stype):
-        """ Find specific templates for types."""
+        """Find specific templates for types."""
         """template format is: for one server with {NAME}, and
          {description}, {result} for each report item."""
         # TODO use files for templates

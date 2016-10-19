@@ -13,6 +13,7 @@ import argparse
 
 class Caller(SMBase):
     """A class for general invocation of statmail."""
+
     def __init__(self, hosts="127.0.0.1", email="root@127.0.0.1",
                  stype="minimal"):
         """The standard python init call for statmail."""
