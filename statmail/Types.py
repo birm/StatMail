@@ -29,7 +29,7 @@ class Types(SMBase):
         """Get report items."""
         """ should be list of [descrption, test] items"""
         if stype == "minimal":
-            return ["CPU Usage", "mpstat | awk '$12 ~ /[0-9.]+/ { \
-                    print 100 - $12\"%\" }'"]
+            return [["CPU Usage", "mpstat | awk '$12 ~ /[0-9.]+/ { \
+                    print 100 - $12\"%\" }'"]]
         else:
             return False

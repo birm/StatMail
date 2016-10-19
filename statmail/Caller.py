@@ -18,6 +18,7 @@ class Caller(SMBase):
                  stype="minimal"):
         """The standard python init call for statmail."""
         # parse input
+        self.stype = stype
         if type(hosts) is str:
             hosts = [hosts]
         self.hosts = hosts
@@ -31,7 +32,7 @@ class Caller(SMBase):
         """Track objects and run standard."""
         self.scans = []
         for host in self.hosts:
-            scanner = Scan(host[0], host[1])
+            scanner = Scan(host[0], self.stype)
             # pass arguments at scan level
             self.scans.append(scanner.scan(host[2]))
         self.formatter = Format(self.scans)
