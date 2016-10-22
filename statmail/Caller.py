@@ -35,7 +35,7 @@ class Caller(SMBase):
             scanner = Scan(host[0], self.stype)
             # pass arguments at scan level
             self.scans.append(scanner.scan(host[2]))
-        self.formatter = Format(self.scans)
+        self.formatter = Format(self.scans, self.stype)
         self.sender = Send(self.email)
         self.status = self.sender.send(self.formatter.out())
 

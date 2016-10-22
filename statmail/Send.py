@@ -1,5 +1,4 @@
 from .SMBase import SMBase
-from .Types import Types
 
 import smtplib
 import email

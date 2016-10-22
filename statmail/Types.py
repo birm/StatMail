@@ -17,10 +17,11 @@ class Types(SMBase):
     def find_template(self, stype):
         """Find specific templates for types."""
         """template format is: for one server with {NAME}, and
-         {description}, {result} for each report item."""
+         {description}, {result} for each report item.
+         The returned list is [header, name section, result, footer] in html"""
         # TODO use files for templates
         if stype == "minimal":
-            return "<html>{NAME}<br\>{description}:{result}</html>"
+            return ["<html>", "{NAME}<br/>", "{description}:{result}<br/>", "</html>"]
         else:
             return False
 
